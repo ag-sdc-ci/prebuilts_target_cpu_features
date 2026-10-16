@@ -1,0 +1,6 @@
+shadow prebuilt repo: cpu_features (target)
+  upstream: external/cpu_features
+  arch package: libcpu_features-utils v14.0.0_r67-1, Forgejo ag-ci arch repo
+  api-level: universal (branch 32-20261016)
+  layout: libcpu_features-utils-*.pkg.tar.zst at root; extracted include/ and lib64/; Android.bp providing libcpu_features, libcpu_features-utils, libcpu_features-hwcaps
+  date: 2026-10-16

@@ -1,0 +1,75 @@
+package {
+    default_applicable_licenses: ["external_cpu_features_license"],
+}
+
+license {
+    name: "external_cpu_features_license",
+    visibility: [":__subpackages__"],
+    license_kinds: [
+        "SPDX-license-identifier-Apache-2.0",
+        "SPDX-license-identifier-BSD",
+    ],
+    license_text: [
+        "LICENSE",
+    ],
+}
+
+cc_prebuilt_library {
+    name: "libcpu_features-utils",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.art",
+        "com.android.art.debug",
+    ],
+    export_include_dirs: ["include"],
+    shared: {
+        srcs: ["lib64/libcpu_features-utils.so"],
+    },
+    static: {
+        srcs: ["lib64/libcpu_features-utils.a"],
+    },
+}
+
+cc_prebuilt_library {
+    name: "libcpu_features-hwcaps",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.art",
+        "com.android.art.debug",
+    ],
+    export_include_dirs: ["include"],
+    shared: {
+        srcs: ["lib64/libcpu_features-hwcaps.so"],
+    },
+    static: {
+        srcs: ["lib64/libcpu_features-hwcaps.a"],
+    },
+}
+
+cc_prebuilt_library {
+    name: "libcpu_features",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.art",
+        "com.android.art.debug",
+    ],
+    export_include_dirs: ["include"],
+    shared: {
+        srcs: ["lib64/libcpu_features.so"],
+    },
+    static: {
+        srcs: ["lib64/libcpu_features.a"],
+    },
+}
